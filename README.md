@@ -5,10 +5,11 @@ Simple Tip Calculator Android App where you'll enter your bill amount, tip in pe
 Usage
 --------------
 
-Master/Main Branch is a Starter Project which contains UI only.
+Master/Main Branch is a Starter Project which just contains UI.
+
 Final_Project Branch is a Final Project which contains actual logic to calculate tip
 
-This App uses MVVM (Model View ViewModel) architecture
+This App uses MVVM (Model View ViewModel) architecture with Data Binding
 
 Pre-requisites
 --------------
