@@ -8,7 +8,8 @@ Final_Project Branch is a Final Project which contains actual logic to calculate
 
 This App uses MVVM (Model View ViewModel) architecture
 
-Pre-requisites:-
+Pre-requisites
+--------------
 
 Basic knowledge of Android and Kotlin
 Knowledge of Data Binding, and MVVM is Good to have
