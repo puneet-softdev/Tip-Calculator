@@ -1,134 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-    <TextView
-        android:id="@+id/tvTipCalculatorCaption"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tip Calculator"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="20dp"
-        android:textSize="20sp"
-        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"/>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cvTipCalculation"
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:elevation="10dp"
-        android:layout_margin="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvTipCalculatorCaption">
-
-        <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            xmlns:tools="http://schemas.android.com/tools"
-            android:padding="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
 
         <TextView
-            android:id="@+id/tvBill"
-            android:layout_width="match_parent"
+            android:id="@+id/tvTipCalculatorCaption"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Total Bill"
+            android:text="@string/tip_calculator"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_margin="5dp"
-            android:textSize="20sp"
-            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"/>
+            android:layout_marginTop="@dimen/dimen_20"
+            android:textSize="@dimen/font_20"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"/>
 
-        <EditText
-            android:id="@+id/etBill"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvTipCalculation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="0"
-            android:layout_margin="5dp"
+            android:elevation="@dimen/dimen_10"
+            android:layout_margin="@dimen/dimen_10"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvBill"
-            />
+            app:layout_constraintTop_toBottomOf="@id/tvTipCalculatorCaption">
+
+            <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tvBill"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total Bill"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_margin="5dp"
+                    android:textSize="20sp"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"/>
+
+                <EditText
+                    android:id="@+id/etBill"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:layout_margin="5dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvBill"
+                    />
+
+                <TextView
+                    android:id="@+id/tvTipPercentage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tip %"
+                    android:layout_margin="5dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:textSize="20sp"
+                    app:layout_constraintTop_toBottomOf="@id/etBill"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"/>
+
+                <EditText
+                    android:id="@+id/etTipPercentage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:layout_margin="5dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvTipPercentage"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
 
         <TextView
-            android:id="@+id/tvTipPercentage"
-            android:layout_width="match_parent"
+            android:id="@+id/tvTipAmount"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tip %"
-            android:layout_margin="5dp"
+            android:text="@string/tip"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:textSize="20sp"
-            app:layout_constraintTop_toBottomOf="@id/etBill"
-            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"/>
+            android:layout_margin="@dimen/dimen_10"
+            android:textSize="@dimen/font_20"
+            app:layout_constraintTop_toBottomOf="@id/cvTipCalculation"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"/>
 
-        <EditText
-            android:id="@+id/etTipPercentage"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/tvTipAmountValue"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0"
-            android:layout_margin="5dp"
-            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/_0_00"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvTipPercentage"
-            />
+            android:layout_margin="@dimen/dimen_10"
+            android:textSize="@dimen/font_20"
+            app:layout_constraintTop_toBottomOf="@id/cvTipCalculation"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"/>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/tvTotalAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="@dimen/dimen_10"
+            android:textSize="@dimen/font_20"
+            app:layout_constraintTop_toBottomOf="@id/tvTipAmount"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"/>
 
-    </androidx.cardview.widget.CardView>
+        <TextView
+            android:id="@+id/tvTotalAmountValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_0_00"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="@dimen/dimen_10"
+            android:textSize="@dimen/font_20"
+            app:layout_constraintTop_toBottomOf="@id/tvTipAmountValue"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"/>
 
-    <TextView
-        android:id="@+id/tvTipAmount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tip"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_margin="10dp"
-        android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@id/cvTipCalculation"
-        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"/>
-
-    <TextView
-        android:id="@+id/tvTipAmountValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="$0.00"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="10dp"
-        android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@id/cvTipCalculation"
-        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"/>
-
-    <TextView
-        android:id="@+id/tvTotalAmount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Total"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_margin="10dp"
-        android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@id/tvTipAmount"
-        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"/>
-
-    <TextView
-        android:id="@+id/tvTotalAmountValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="$0.00"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="10dp"
-        android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@id/tvTipAmountValue"
-        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"/>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
