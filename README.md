@@ -1,6 +1,6 @@
 # RW Tip-Calculator
 
-Simple Tip Calculator Android App where you'll enter your bill amount, tip in percentage and this app will calculate total amount including tip and will show you the same
+Simple Tip Calculator Android App where you'll enter your bill amount and tip in percentage. This app will calculate total amount along with the tip and will show you the same. Simple and Easy!
 
 Usage
 --------------
