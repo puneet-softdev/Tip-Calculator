@@ -14,4 +14,5 @@ Pre-requisites
 --------------
 
 Basic knowledge of Android and Kotlin
+
 Knowledge of Data Binding, and MVVM is Good to have
