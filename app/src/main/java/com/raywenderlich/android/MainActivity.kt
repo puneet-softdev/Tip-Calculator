@@ -12,6 +12,7 @@ import com.raywenderlich.android.viewmodel.TipCalculatorViewModel
 
 class MainActivity : AppCompatActivity() {
     private lateinit var activityMainBinding: ActivityMainBinding
+    private lateinit var tempVariable:String
     private val tipCalculatorViewModel: TipCalculatorViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
